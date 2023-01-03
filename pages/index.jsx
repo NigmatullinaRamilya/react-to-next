@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from "next/link";
 
 function Header({ title }) {
   return <h1>{title ? title : 'Default title'}</h1>;
@@ -23,6 +24,13 @@ export default function HomePage() {
       </ul>
 
       <button onClick={handleClick}>Like ({likes})</button>
+
+      <h2>Errors</h2>
+      <ul>
+        <li><Link href={'/301-moved-permanently'}>301 – Moved Permanently</Link></li>
+        <li><Link href={'/308-permanent-redirect'}>308 – Permanent Redirect</Link></li>
+        <li><Link href={'/404-not-found'}>404 – Not Found</Link></li>
+      </ul>
     </div>
   );
 }
